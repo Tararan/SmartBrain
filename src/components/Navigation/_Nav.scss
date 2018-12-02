@@ -1,0 +1,32 @@
+.Nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    &__logo-img {
+        width: 50px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__logo-text span {
+        padding-left: 10px;
+        font-size: 40px;
+        color: $misc-color;
+        font-family: $title-font;
+    }
+
+    &__login {
+        font-family: $title-font;
+        color: $misc-color;
+        font-size: 20px;
+    }
+}

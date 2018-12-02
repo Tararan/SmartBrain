@@ -1,0 +1,29 @@
+$xs-min: 577px;
+$xs-max: 576px;
+$sm-min: 769px;
+$sm-max: 768px;
+$md-min: 993px;
+$md-max: 992px;
+$lg-min: 1201px;
+$lg-max: 1200px;
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  
+    @media (max-width: $md-max) {
+        padding: 45px;
+    }
+    
+    @media (max-width: $sm-max) {
+        padding: 20px;
+    }
+
+    @media (max-width: $xs-max) {
+        padding: 10px;
+    }
+
+
+}

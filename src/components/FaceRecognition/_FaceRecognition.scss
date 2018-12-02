@@ -1,0 +1,34 @@
+.FaceRecognition {
+    & .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        margin-top: 25px;
+        width: 450px;
+        position: relative;
+
+        & img {
+            border-radius: 10px;
+            box-shadow: 0 0 50px 2px rgba(0,0,0, 0.25);
+            transform: scale(1);
+            transition: box-shadow 0.25s ease-in, transform 0.25s ease-in;
+
+            &:hover {
+                box-shadow: 0 0 50px 1px rgba(0,0,0, 0.4);
+                transform: scale(1.05);
+                transition: box-shadow 0.25s ease-out, transform 0.25s ease-out;
+            }
+        }
+    }
+
+    &__bounding-box {
+        position: absolute;
+        box-shadow: 0 0 0 3px blue inset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,60 @@
+.ImageLinkForm {
+    & .container {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    &__title {
+        color: $text-color;
+        font-size: 30px;
+    }
+
+    &__input {
+        display: flex;
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        & input {
+            width: 100%;
+            background-color: transparent;
+            height: 50px;
+            border: 2px solid lighten($primary-color, 10%);
+            transition: border 0.5s ease-in, color 0.5s ease-in;
+            padding: 0 20px;
+            font-size: 30px;
+            color: $white;
+
+            &:focus {
+                box-shadow: 0;
+                outline: none;
+                border: 2px solid lighten($secondary-color, 10%);
+                transition: border 0.25s ease-out, color 0.25s ease-out;
+            }
+        }
+
+        & button {
+            display: flex;
+            justify-content: center;
+            margin-top: 45px;
+            width: 200px;
+            height: 50px;
+            font-family: $title-font;
+            font-size: 30px;
+            color: lighten($primary-color, 10%);
+            background-color: transparent;
+            border: 2px solid lighten($primary-color, 10%);
+            
+            transition: border 0.5s ease-in, color 0.5s ease-in;
+
+            &:hover, &:focus {
+                color: lighten($secondary-color, 10%);
+                border-color: lighten($secondary-color, 10%);
+                transition: border 0.25s ease-out, color 0.25s ease-out;
+                cursor: pointer;
+            }
+        }
+    }
+}

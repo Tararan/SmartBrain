@@ -1,0 +1,17 @@
+body {
+background: linear-gradient(to right, $primary-color, $secondary-color);
+}
+
+img {
+  width: 100%;
+}
+
+
+p, span, a, button, div, small {
+  font-family: $text-font;
+}
+
+
+.hidden {
+  display: none;
+}
