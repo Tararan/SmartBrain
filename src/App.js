@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
+import Signin from './components/Signin/Signin';
 import './styles/App.scss';
 
 const app = new Clarifai.App({
@@ -63,13 +64,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
-        <Rank />
-        <ImageLinkForm 
-          onInputChange = {this.onInputChange} 
-          onSubmit = {this.onSubmit}
-        />
-        <FaceRecognition box = {this.state.box} imageUrl = {this.state.imageUrl}/>
+        <Signin/>
+        <main>
+          <Navigation />
+          <Rank />
+          <ImageLinkForm 
+            onInputChange = {this.onInputChange} 
+            onSubmit = {this.onSubmit}
+          />
+          <FaceRecognition box = {this.state.box} imageUrl = {this.state.imageUrl}/>
+        </main>
       </div>
     );
   }

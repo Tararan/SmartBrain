@@ -4,4 +4,6 @@ $misc-color: #8AE6D8;
 $misc-color-complementary: adjust-hue($misc-color, 180deg);
 
 $white: #ffffff;
+$white-o-45: rgba(255, 255, 255, 0.45);
+$white-o-25: rgba(255, 255, 255, 0.25);
 $text-color: rgba(255, 255, 255, 0.65);
