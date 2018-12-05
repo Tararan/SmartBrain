@@ -6,6 +6,8 @@
     align-items: center;
     height: 100%;
 
+    width: calc(100vw - 250px);
+
     left: 0;
     right: 0;
     margin: auto;
@@ -20,11 +22,13 @@
         font-size:  4em;
         text-align: center;
         margin-bottom: 20px;
+        font-family: $title-font;
     }
 
     &__form {
         display: flex;
         border: 1px solid $white-o-45;
+        box-shadow: 0 0 30px 2px rgba(0,0,0, 0.2);
         padding: 60px;
         flex-flow: column nowrap;
         width: 40vw;
@@ -37,6 +41,7 @@
     &__field label {
         font-size: 1.8em;
         margin-bottom: 10px;
+        font-family: $title-font;
     }
    
     &__field input {
@@ -49,14 +54,13 @@
     &__checkbox {
         margin: 20px 0;
 
-        & input[type=checkbox] {
-            display: none;
-        }
-
-        & label {
+         label {
+            font-family: $title-font;
             position: relative;
+            font-size: 20px;
             padding-left: 30px;
             transition: color 0.25s;
+            cursor: pointer;
 
             &:before {
                 content: "";
@@ -78,9 +82,22 @@
                     transition: background-color 0.25s;
                 }
             }
-
-            // input[type=checkbox]:checked +
         }
+
+        & input[type=checkbox] {
+            display: none;
+
+            &:checked+label {
+                color: $white-o-45;
+                transition: color 0.25s;
+
+                &:before {
+                    background-color: $white-o-45;
+                    transition: background-color 0.25s;
+                }
+            }
+        }
+
     }
 
     &__submit  {
@@ -90,6 +107,8 @@
         margin: 20px 0 40px;
         
         & input[type=submit] { 
+            font-size: 20px;
+            font-family: $title-font;
             width: 200px;
             height: 50px;
             background-color: transparent;
@@ -98,6 +117,7 @@
             transition: background-color 0.25s;
             
             &:hover, &:focus {
+                cursor: pointer;
                 background-color: $white-o-45;
                 transition: background-color 0.25s;
             }
@@ -111,8 +131,16 @@
         flex-flow: column nowrap;
     }
 
-    &__field--links a {
+    &__field--links a, button {
         color: $white;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        padding: 0;
+        display: inline-flex;
+        font-family: $title-font;
+        width: 200px;
         text-decoration: none;
+        cursor: pointer;
     }
 }

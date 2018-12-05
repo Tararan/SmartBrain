@@ -1,7 +1,7 @@
 import React from 'react';
 import Chip from '../../images/chip.png';
 
-const Navigation = () => {
+const Navigation = ({ onRouteChange, isSignedIn }) => {
     return (
         <nav className="Nav">
             <div className="Nav__logo">
@@ -12,7 +12,13 @@ const Navigation = () => {
                     <span>SmartBrain</span>
                 </div>
             </div>
-            <p className="Nav__login"> Sign Out </p>
+        { isSignedIn === true 
+        ?   <p onClick = {() => onRouteChange('signout') } className="Nav__login"> Sign Out </p>
+        :   <div>
+            <p onClick = {() => onRouteChange('signin') } className="Nav__login"> Sign In </p>
+            <p onClick = {() => onRouteChange('register') } className="Nav__login">  Register </p>
+            </div>
+        }
         </nav>
     )
 }
