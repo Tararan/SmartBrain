@@ -7,9 +7,6 @@ import Signin from './components/Signin/Signin';
 import Register from './components/Signin/Register';
 import './styles/App.scss';
 
-// const envPort = 'http://localhost:3000';
-// const envPort = 'https://serene-falls-16769.herokuapp.com';
-
 const initialState = {
   input: '',
   imageUrl: '',
@@ -84,7 +81,7 @@ class App extends Component {
 
     onSubmit = () => {
       this.setState({imageUrl: this.state.input})
-      fetch('https://serene-falls-16769.herokuapp.com/image', {
+      fetch('https://serene-falls-16769.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
